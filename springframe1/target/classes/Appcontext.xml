@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+<!-- <bean id="alien" class="com.vikramdev.Alien" scope="prototype"> -->
+<!-- </bean> -->
+<bean id="alien" class="com.vikramdev.Alien">
+<property name="age" value="23"></property>
+<!-- <constructor-arg value="21"></constructor-arg> -->
+		<!-- <constructor-arg ref="lap1"></constructor-arg> -->
+		
+<!--		<constructor-arg type="com.vikramdev.Laptop" ref="lap1"/>
+		<constructor-arg type="int" value="21"/> -->
+		
+<!--		<constructor-arg index="1" ref="lap1"/>
+		<constructor-arg index="0" value="21"/> -->
+		
+		<constructor-arg name="lap" ref="lap1"/>
+		<constructor-arg name="age" value="21"/>
+</bean>
+
+
+<bean id="lap1" class="com.vikramdev.Laptop">
+	</bean>
+</beans>
